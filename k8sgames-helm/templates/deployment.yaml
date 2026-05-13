@@ -12,6 +12,18 @@ spec:
       labels:
         app: k8sgames
     spec:
+      initContainers:
+        - name: clone-game-repo
+          # Alpine image bundled with git to pull down the repository
+          image: alpine/git:2.43.0
+          # Clones into a temporary folder first, then moves files to ensure /data is clean
+          command:
+            - "sh"
+            - "-c"
+            - "git clone https://github.com /tmp/repo && cp -r /tmp/repo/* /data/"
+          volumeMounts:
+            - name: site-content
+              mountPath: /data
       containers:
         - name: nginx
           image: nginx:1.27.0

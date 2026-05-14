@@ -6,10 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: myazurecontainer-ang9cxa4brhma9g4.azurecr.io
-    path: platform-helm-charts/k8sgames
-    targetRevision: 0.1.0
-    chart: platform-helm-charts/k8sgames
+    repoURL: git@github.com:Prudence-Pulane-Malatjie/k8sgames.git
+    path: k8sgames-deployments/k8sgames-helm
+    targetRevision: main
 
   destination:
     server: https://kubernetes.default.svc

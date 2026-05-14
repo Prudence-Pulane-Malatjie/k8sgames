@@ -5,7 +5,7 @@ metadata:
   namespace: argocd-ns
 spec:
   destination:
-    server: https://kubernetes.default.svc/
+    server: https://kubernetes.default.svc
   project: default
   source: 
     repoURL: git@github.com:Prudence-Pulane-Malatjie/k8sgames.git

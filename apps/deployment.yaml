@@ -4,19 +4,13 @@ metadata:
   name: nginx-app
   namespace: apps
 spec:
+  destination:
+    server: https://kubernetes.default.svc/
   project: default
-  source:
+  source: 
     repoURL: git@github.com:Prudence-Pulane-Malatjie/k8sgames.git
     path: nginx-deployment/
     targetRevision: HEAD
-
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: apps
   syncPolicy:
     automated:
       prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-      

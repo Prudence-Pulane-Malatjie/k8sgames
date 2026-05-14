@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: k8sgames
-  namespace: apps
+  namespace: argocd-ns
 spec:
   project: default
   source:
@@ -12,7 +12,6 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: apps
   syncPolicy:
     automated:
       prune: true

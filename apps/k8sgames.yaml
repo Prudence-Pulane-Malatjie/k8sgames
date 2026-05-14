@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:Prudence-Pulane-Malatjie/k8sgames.git
-    path: k8sgames-deployments
+    path: k8sgames-deployments/k8sgames-helm/templates
     targetRevision: HEAD
 
   destination:

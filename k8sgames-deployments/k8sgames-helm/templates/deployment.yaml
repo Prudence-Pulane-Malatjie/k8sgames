@@ -21,7 +21,7 @@ spec:
           command:
             - "sh"
             - "-c"
-            - "git clone https://github.com /tmp/repo && cp -r /tmp/repo/* /data/"
+            - "git clone https://github.com/Prudence-Pulane-Malatjie/k8sgames.git /tmp/repo && cp -r /tmp/repo/* /data/"
           volumeMounts:
             - name: site-content
               mountPath: /data
